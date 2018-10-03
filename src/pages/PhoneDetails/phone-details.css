@@ -1,0 +1,33 @@
+
+.section-details div:first-child {
+    flex:  0 0 50%;
+}
+
+.section-details div:last-child {
+    flex: 1;
+}
+
+.section-details {
+    padding-top: 30px; 
+}
+
+.btn-cart {
+    max-width: 200px;
+    background-color: #00aeef;
+    transition: .2s;
+}
+.btn-cart:hover {
+    opacity: .6;
+}
+
+.img-details{
+    margin-bottom: 30px;
+    max-height: 350px;
+}
+
+.box {
+    border-bottom: 1px solid grey;
+    padding: 5px;
+    margin-bottom: 5px;
+    
+}

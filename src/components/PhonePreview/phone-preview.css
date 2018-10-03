@@ -1,0 +1,31 @@
+.bold{
+    font-weight: 700;
+}
+
+.section-preview div:first-child {
+    flex: 0 0 50%;
+}
+
+.img {
+    max-width: 200px;
+}
+
+.section-preview div:last-child {
+    flex: 1;
+}
+
+.price {
+    text-align: center;
+    width: 220px;
+    padding: 4px;
+}
+
+.btn-buy {
+    background-color: #00aeef;
+    color: #fff;
+}
+
+.btn-buy:hover {
+    opacity: .6;
+}
+

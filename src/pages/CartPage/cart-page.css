@@ -1,0 +1,41 @@
+.img-in-cart {
+    max-width: 200px;
+    max-height: 120px;
+}
+
+.tor {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-price button {
+    height: 30px;
+    align-self: center;
+    margin: 0 5px;
+}
+
+.btn-cancel {
+    background-color: #25252586;
+    border-radius: 2px;
+    border: 0;
+    outline: none;
+}
+
+.btn-add-cart {
+    background-color: rgba(9, 75, 129, 0.925);
+    color: white;
+    border: 0;
+    outline: none;
+}
+
+.box-cart{
+    border: 1px solid grey;
+    width: 40%;
+    box-shadow: 1px 2px 1px #000;
+    padding: 2px 5px;
+    margin-bottom: 15px;
+}
+
+.box-cart button {
+    align-self: center;
+}
