@@ -1,4 +1,5 @@
 import * as actionTypes from '../actions/actionTypes'
+import { updateState } from '../utility'
 
 const initialState = {
     user: {
@@ -12,23 +13,16 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
+    const { user } = action
     switch (action.type) {
         case actionTypes.SET_USER:
-            const updatedUser = action.user ? action.user : { ...state.user }
-                return {
-                    ...state,
-                    user: updatedUser
-                }
+            return updateState(state, { user })
         case actionTypes.LOGOUT_USER:
-            return {
-                ...state,
-                user: action.user
-            }
+            return updateState(state, { user })
         case actionTypes.UPDATE_CART_ITEMS:
-            return {
-                ...state,
-                user: action.user
-            }
+            return updateState(state, { user })
+        case actionTypes.ADD_USER:
+            return updateState(state, { user })
     }
     return state
 }

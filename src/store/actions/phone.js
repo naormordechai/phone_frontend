@@ -1,6 +1,9 @@
 import * as actionTypes from './actionTypes'
 import PhoneService from '../../services/PhoneService'
 
+
+// load all phones from a database
+
 const _laodPhones = (phones) => {
     return {
         type: actionTypes.LOAD_PHONES,
@@ -16,6 +19,9 @@ export const loadPhones = () => {
             })
     }
 }
+
+
+// in case of reviews phone update
 
 const _updatePhoneReviews = (phone) => {
     return {

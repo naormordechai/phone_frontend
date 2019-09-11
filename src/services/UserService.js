@@ -15,14 +15,18 @@ async function updetedCartUser(user) {
     return await axios.put(`${USER_URL}/${user._id}`, user)
 }
 
+async function addUser(user) {
+    return await axios.post(`${USER_URL}/add`, user)
+}
+
 function getUserEmpty() {
     return {
-        _id : '',
-        firstName : '',
-        lastName : '',
-        email : '',
-        password : '',
-        cartItems : []
+        _id: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        cartItems: []
     }
 }
 
@@ -30,5 +34,6 @@ export default {
     checkLogin,
     getUserById,
     updetedCartUser,
-    getUserEmpty
+    getUserEmpty,
+    addUser
 }

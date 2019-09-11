@@ -1,4 +1,4 @@
 
-ul li:not(:first-child) {
+.list li:not(:first-child) {
     margin-top: 40px;
 }

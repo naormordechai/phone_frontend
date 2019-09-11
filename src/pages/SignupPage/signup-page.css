@@ -1,0 +1,21 @@
+.width {
+    width: 1000px;
+}
+
+label {
+    display: block;
+    width: 50px;
+}
+
+.ib {
+    display: inline-block;
+    width: 100px;
+}
+
+.p{
+    width: 100px;
+}
+
+form div {
+    margin-bottom: 15px;
+}

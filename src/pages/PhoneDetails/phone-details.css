@@ -29,5 +29,21 @@
     border-bottom: 1px solid grey;
     padding: 5px;
     margin-bottom: 5px;
-    
+}
+
+.reviews {
+    margin-bottom: 100px;
+}
+
+.description {
+    position: relative;
+}
+
+.options {
+    /* position: absolute;
+    right: -7px;
+    bottom: 6px;
+    background-color: rgba(107, 107, 107);
+    display: none; */
+    display: none;
 }

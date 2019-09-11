@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import UserService from '../../services/UserService'
-import * as actionCreators from '../../store/actions/indexUser'
+import * as actionCreators from '../../store/actions/index'
 
 class LoginPage extends React.Component {
 
@@ -10,11 +9,10 @@ class LoginPage extends React.Component {
             email: '',
             password: ''
         },
-        user: UserService.getUserEmpty(),
     }
 
-    handlerLogin = (user) => {
-        this.props.onLoginUser(user)
+    handlerLogin = (userInfo) => {
+        this.props.onLoginUser(userInfo)
     }
 
     handlerEmail = (ev) => {
@@ -38,28 +36,16 @@ class LoginPage extends React.Component {
     }
 
     componentWillReceiveProps(props) {
-        (props.user.firstName ? props.history.goBack() : alert('wrong password'))
+        (props.user.firstName ? props.history.goBack() : null)
     }
-
-    foo = (x) => {
-        if (!this.props.user.firstName) {
-            return (
-                <p>{x}</p>
-            )
-        } else {
-            return (
-                <p>{this.props.user.firstName}</p>
-            )
-        }
-    }
-
 
     render() {
+        const { userInfo } = this.state
         return (
             <section>
                 <input type="email" placeholder="email" onChange={this.handlerEmail} />
                 <input type="password" placeholder="password" onChange={this.handlerPassword} />
-                <button onClick={() => this.handlerLogin(this.state.userInfo)}>login</button>
+                <button onClick={() => this.handlerLogin(userInfo)}>login</button>
             </section>
         )
     }
