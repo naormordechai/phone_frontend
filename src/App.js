@@ -14,7 +14,8 @@ import PhoneDetails from './pages/PhoneDetails/PhoneDetails'
 import LoginPage from './pages/LoginPage/LoginPage'
 import CartPage from './pages/CartPage/cartPage'
 import SignupPage from './pages/SignupPage/SignupPage'
-import * as actionCreators from './store/actions/index'
+import * as actionCreators from './store/actions/index';
+import classes from './App.css'
 
 class App extends Component {
 
@@ -25,6 +26,7 @@ class App extends Component {
 
   loadPhones = () => {
     this.props.onLoadPhones();
+    console.log(classes)
   }
 
   loadUser = () => {
@@ -53,6 +55,7 @@ class App extends Component {
                 <NavLink activeClassName="opacity" to="/signup">sign up</NavLink>
               </div>
             )}
+            <NavLink to="demo" className={classes.demo}>Demo</NavLink>
           <Route path="/" exact component={HomePage} />
           <Route path="/login" exact component={LoginPage}></Route>
           <Route path="/signup" exact component={SignupPage}></Route>

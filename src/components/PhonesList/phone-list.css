@@ -2,3 +2,7 @@
 .list li:not(:first-child) {
     margin-top: 40px;
 }
+
+.red {
+    color: red;
+}
